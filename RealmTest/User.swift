@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+import RealmSwift
+
+class User: Object {
+    dynamic var id = 1
+    dynamic var name = ""
+}

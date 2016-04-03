@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let me = User()
+        me.name = "ほげ三郎"
+        
+        let realm = try! Realm()
+//        try! realm.write {
+//            realm.add(me)
+//        }
+      
+        print(realm.path)
+        print(realm.objects(User))
+        
     }
 
     override func didReceiveMemoryWarning() {
